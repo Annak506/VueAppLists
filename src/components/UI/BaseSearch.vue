@@ -22,21 +22,21 @@ input {
   width: 100%;
   display: block;
   padding: 0.75rem;
-  border: 2px solid #ffcc99; /* Soft peach border */
-  border-radius: 8px; /* Rounded corners */
+  border: 2px solid #ffcc99; 
+  border-radius: 8px; 
   font-size: 1.1rem;
-  background-color: #fff; /* White background */
+  background-color: #fff; 
   transition: border-color 0.3s, background-color 0.3s;
   margin-bottom: 1rem;
 }
 
 input:focus {
   outline: none;
-  border-color: #ff9966; /* Darker peach when focused */
-  background-color: #ffe0cc; /* Light peach background when focused */
+  border-color: #ff9966; 
+  background-color: #ffe0cc; 
 }
 
 input::placeholder {
-  color: #aaa; /* Subtle placeholder text */
+  color: #aaa; 
 }
 </style>

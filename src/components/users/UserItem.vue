@@ -21,9 +21,9 @@ export default {
 li {
   margin: 0.5rem 0;
   padding: 1rem;
-  background-color: #fff7e6; /* Soft peach background */
+  background-color: #fff7e6; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border: 2px solid #ffcc99; /* Light peach border */
+  border: 2px solid #ffcc99; 
   border-radius: 10px;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
@@ -35,13 +35,13 @@ li:hover {
 
 li h3 {
   margin: 0;
-  color: #ff9966; /* Peach color for heading */
+  color: #ff9966; 
   font-size: 1.2rem;
   font-weight: bold;
 }
 
 button {
-  background-color: #ff9966; /* Peach button color */
+  background-color: #ff9966; 
   color: white;
   padding: 0.5rem 1rem;
   border: none;
@@ -52,6 +52,6 @@ button {
 }
 
 button:hover {
-  background-color: #ff704d; /* Darker peach on hover */
+  background-color: #ff704d; 
 }
 </style>

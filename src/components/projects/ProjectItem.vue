@@ -12,7 +12,7 @@ export default {
 
 <style scoped>
 li {
-  background-color: #9caf88; /* Sage green background */
+  background-color: #9caf88; 
   color: white;
   padding: 1rem;
   margin: 1rem 0;
@@ -22,7 +22,7 @@ li {
 }
 
 li:hover {
-  background-color: #7a8f6d; /* Slightly darker sage green on hover */
+  background-color: #7a8f6d; 
   transform: translateY(-2px);
 }
 

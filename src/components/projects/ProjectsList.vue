@@ -35,8 +35,8 @@ export default {
 
 <style scoped>
 base-container {
-  background-color: #e3e9d4; /* Light sage green background */
-  border: 2px solid #a7b89b; /* Medium sage green border */
+  background-color: #e3e9d4; 
+  border: 2px solid #a7b89b; 
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -44,7 +44,7 @@ base-container {
 }
 
 h2 {
-  color: #8fa78f; /* Soft sage green for headings */
+  color: #8fa78f; 
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }

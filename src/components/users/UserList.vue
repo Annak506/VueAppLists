@@ -92,7 +92,7 @@ ul {
 }
 
 button {
-  background-color: #ff9966; /* Peach button color */
+  background-color: #ff9966; 
   color: white;
   padding: 0.5rem 1.5rem;
   border: none;
@@ -104,16 +104,16 @@ button {
 }
 
 button:hover {
-  background-color: #ff704d; /* Darker peach on hover */
+  background-color: #ff704d; 
 }
 
 .selected {
-  background-color: #ff704d; /* Highlighted button in darker peach */
+  background-color: #ff704d; 
 }
 
 base-container {
-  background-color: #fff7e6; /* Light peach background */
-  border: 2px solid #ffcc99; /* Light peach border */
+  background-color: #fff7e6; 
+  border: 2px solid #ffcc99; 
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -121,7 +121,7 @@ base-container {
 }
 
 h2 {
-  color: #ff9966; /* Peach color for the title */
+  color: #ff9966; 
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
