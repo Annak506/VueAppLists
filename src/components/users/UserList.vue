@@ -33,7 +33,6 @@ export default {
     const enteredSearchTerm = ref('');
     const activeSearchTerm = ref('');
 
-    // Watcher to debounce search term updates
     watch(enteredSearchTerm, function (newValue) {
       setTimeout(() => {
         if (newValue === enteredSearchTerm.value) {
@@ -42,7 +41,6 @@ export default {
       }, 300);
     });
 
-    // Computed property for filtered users
     const availableUsers = computed(() => {
       if (activeSearchTerm.value) {
         return props.users.filter((usr) =>
@@ -55,7 +53,6 @@ export default {
     // Sorting logic
     const sorting = ref(null);
 
-    // Computed property for displayed (filtered + sorted) users
     const displayedUsers = computed(() => {
       if (!sorting.value) {
         return availableUsers.value;
@@ -73,17 +70,14 @@ export default {
       });
     });
 
-    // Sort function
     function sort(mode) {
       sorting.value = mode;
     }
 
-    // Function to update the search term
     function updateSearch(val) {
       enteredSearchTerm.value = val;
     }
 
-    // Return variables and functions for template usage
     return {
       enteredSearchTerm,
       updateSearch,
