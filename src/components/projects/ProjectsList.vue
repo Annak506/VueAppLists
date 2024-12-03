@@ -4,7 +4,7 @@
     <ul v-if="hasProjects">
       <project-item v-for="prj in user.projects" :key="prj.id" :title="prj.title" />
     </ul>
-    <h3 v-else>No projects found.</h3>
+    <h3 v-else>No game ideas found.</h3>
   </base-container>
 
   <base-container v-else>
