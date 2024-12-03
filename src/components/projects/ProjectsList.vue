@@ -1,9 +1,8 @@
 <template>
   <base-container v-if="user">
     <h2>{{ user.fullName }}: Projects</h2>
-    <base-search v-if="hasProjects" @search="updateSearch" :search-term="enteredSearchTerm"></base-search>
     <ul v-if="hasProjects">
-      <project-item v-for="prj in availableProjects" :key="prj.id" :title="prj.title"></project-item>
+      <project-item v-for="prj in user.projects" :key="prj.id" :title="prj.title"></project-item>
     </ul>
     <h3 v-else>No projects found.</h3>
   </base-container>
@@ -14,7 +13,7 @@
 
 <script>
 import ProjectItem from './ProjectItem.vue';
-import { ref, computed, watch } from 'vue';
+import { computed } from 'vue';
 
 export default {
   components: {
@@ -22,43 +21,12 @@ export default {
   },
   props: ['user'],
   setup(props) {
-    const enteredSearchTerm = ref('');
-    const activeSearchTerm = ref('');
-
-    const availableProjects = computed(() => {
-      if (activeSearchTerm.value) {
-        return props.user.projects.filter((prj) =>
-          prj.title.includes(activeSearchTerm.value)
-        );
-      }
-      return props.user.projects || [];
-    });
-
     const hasProjects = computed(() => {
-      return props.user.projects && availableProjects.value.length > 0;
+      return props.user.projects && props.user.projects.length > 0;
     });
-
-    watch(enteredSearchTerm, (newValue) => {
-      setTimeout(() => {
-        if (newValue === enteredSearchTerm.value) {
-          activeSearchTerm.value = newValue;
-        }
-      }, 300);
-    });
-
-    watch(props, () => {
-      enteredSearchTerm.value = '';
-    });
-
-    function updateSearch(val) {
-      enteredSearchTerm.value = val;
-    }
 
     return {
-      enteredSearchTerm,
-      availableProjects,
       hasProjects,
-      updateSearch,
     };
   },
 };
