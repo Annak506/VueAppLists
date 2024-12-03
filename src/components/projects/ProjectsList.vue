@@ -50,7 +50,7 @@ h2 {
 }
 
 h3 {
-  color: #8fa78f;
+  color: #ff9966;
   font-size: 1.1rem;
   text-align: center;
 }
