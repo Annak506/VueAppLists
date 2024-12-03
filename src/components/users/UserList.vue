@@ -1,6 +1,6 @@
 <template>
   <base-container>
-    <h2>Active Users</h2>
+    <h2>Play ideas per month</h2>
     <base-search @search="updateSearch" :search-term="enteredSearchTerm"></base-search>
     <div>
       <button @click="sort('asc')" :class="{selected: sorting === 'asc'}">Sort Ascending</button>
@@ -50,7 +50,7 @@ export default {
       return props.users || [];
     });
 
-    // Sorting logic
+    // Sorting logic by ID (ascending or descending)
     const sorting = ref(null);
 
     const displayedUsers = computed(() => {
@@ -58,15 +58,12 @@ export default {
         return availableUsers.value;
       }
       return availableUsers.value.slice().sort((u1, u2) => {
-        if (sorting.value === 'asc' && u1.fullName > u2.fullName) {
-          return 1;
-        } else if (sorting.value === 'asc') {
-          return -1;
-        } else if (sorting.value === 'desc' && u1.fullName > u2.fullName) {
-          return -1;
-        } else {
-          return 1;
+        if (sorting.value === 'asc') {
+          return u1.id.localeCompare(u2.id); // Ascending order by ID
+        } else if (sorting.value === 'desc') {
+          return u2.id.localeCompare(u1.id); // Descending order by ID
         }
+        return 0;
       });
     });
 
@@ -88,7 +85,6 @@ export default {
   },
 };
 </script>
-
 
 <style scoped>
 ul {

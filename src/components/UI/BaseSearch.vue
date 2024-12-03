@@ -1,6 +1,6 @@
 <template>
   <form>
-    <input type="search" @input="search" :value="searchTerm" placeholder="Filter items" />
+    <input type="search" @input="search" :value="searchTerm" placeholder="How many months old is your baby?" />
   </form>
 </template>
 

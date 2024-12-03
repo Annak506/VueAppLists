@@ -1,7 +1,7 @@
 <template>
   <li>
     <h3>{{ userName }}</h3>
-    <button @click="viewProjects">View Projects</button>
+    <button @click="viewProjects">View game ideas</button>
   </li>
 </template>
 
