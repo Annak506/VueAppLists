@@ -1,6 +1,6 @@
 <template>
   <main>
-    <user-list :users="activeUsers" @list-projects="selectUser"></user-list>
+    <game-list :users="activeUsers" @list-projects="selectUser"></game-list>
     <projects-list :user="selectedUser"></projects-list>
   </main>
 </template>
@@ -9,12 +9,12 @@
 import {ref} from 'vue';
 import USER_DATA from './dummy-data.js';
 
-import UserList from './components/users/UserList.vue';
+import GameList from './components/users/GameList.vue';
 import ProjectsList from './components/projects/ProjectsList.vue';
 
 export default {
   components: {
-    UserList,
+    GameList,
     ProjectsList,
   },
   setup(){

@@ -7,24 +7,24 @@
       <button @click="sort('desc')" :class="{selected: sorting === 'desc'}">Sort Descending</button>
     </div>
     <ul>
-      <user-item
+      <game-item
         v-for="user in displayedUsers"
         :key="user.id"
         :user-name="user.fullName"
         :id="user.id"
         @list-projects="$emit('list-projects', $event)"
-      ></user-item>
+      ></game-item>
     </ul>
   </base-container>
 </template>
 
 <script>
-import UserItem from './UserItem.vue';
+import GameItem from './GameItem.vue';
 import { ref, computed, watch } from 'vue';
 
 export default {
   components: {
-    UserItem,
+    GameItem,
   },
   props: ['users'],
   emits: ['list-projects'],
