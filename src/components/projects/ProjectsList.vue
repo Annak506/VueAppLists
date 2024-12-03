@@ -8,7 +8,7 @@
   </base-container>
 
   <base-container v-else>
-    <h3>No user selected.</h3>
+    <h3>Please select a month to see the game ideas for that age.</h3>
   </base-container>
 </template>
 
