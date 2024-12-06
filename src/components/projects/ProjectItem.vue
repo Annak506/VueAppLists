@@ -1,7 +1,7 @@
 <template>
   <li>
     <h3 @click="toggleDetails">{{ title }}</h3>
-    <div v-if="showDetails" class="details-container">
+    <div v-if="showDetails">
       <p><strong>Materials:</strong> {{ materials }}</p>
       <p><strong>Instructions:</strong> {{ instruction }}</p>
     </div>
@@ -38,21 +38,21 @@ li:hover {
   background-color: #7a8f6d;
   transform: translateY(-2px);
 }
+
 li h3 {
   margin: 0;
   font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
 }
-.details-container {
-  margin-top: 0.5rem;
-  background-color: #f9f9f9;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+p {
+  margin: 0.5rem 0 0;
+  padding: 0.5rem;
+  background-color: #fff;
   color: #333;
+  border-radius: 4px;
 }
-.details-container p {
-  margin: 0.5rem 0;
+div {
+  margin-top: 0.5rem;
 }
 </style>
